@@ -1,0 +1,26 @@
+名字: 安卓持续集成
+
+在:
+推:
+分支: [ "main" ]
+查询为空 pull_request:
+分支: [ "main" ]
+
+工作:
+建筑:
+
+    runs-on: ubuntu-latest
+
+步骤:
+    - 使用: actions/checkout@v4
+    - 名字: 设置 JDK 11
+使用: actions/setup-java@v4
+与:
+        java-version: '11'
+分布: 'temurin'
+贮存物: 摇篮
+
+-名字: 授予 gradlew你呢
+跑: gradlew文件的权限设置为可执行：chmod+x gradlew
+-名字: 用梯级建造
+跑: 执行/gradlew build you
